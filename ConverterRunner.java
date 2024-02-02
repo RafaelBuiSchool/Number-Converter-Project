@@ -81,6 +81,20 @@ class ConverterRunner {
 
         }
     }
+    private static String base16values(int base16Value){
+        String[] underAlphabet = {"a","b","c","d","e","f"};
+        if(base16Value >= 0 && base16Value <= 9){
+            return (String)(base16Value+"");
+        }
+        else if(base16Value >= 10 && base16Value <= 15){
+            int x = base16Value-10;
+            return underAlphabet[x];
+        }
+     else {
+        System.out.println("Error Message: Chosen value does not work.");
+        return null;
+    }
+    }
     private static String newBaseValues(int value) {
          String[] lowerAlphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
